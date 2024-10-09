@@ -1,0 +1,117 @@
+.game-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.cats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* 减小间距 */
+  margin-top: 20px;
+  max-width: 800px; /* 限制最大宽度 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cat {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cat:hover {
+  transform: scale(1.1);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #333;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.cat.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.cat-container {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: calc(20% - 10px); /* 每行5个猫咪 */
+  max-width: 100px; /* 限制最大宽度 */
+}
+
+@media (max-width: 600px) {
+  .cat-container {
+    width: calc(33.33% - 10px); /* 在小屏幕上每行3个猫咪 */
+  }
+}
+
+.feedback {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  color: white;
+  z-index: 10;
+}
+
+.feedback-correct {
+  background-color: #4caf50; /* 绿色 */
+}
+
+.feedback-incorrect {
+  background-color: #f44336; /* 红色 */
+}
