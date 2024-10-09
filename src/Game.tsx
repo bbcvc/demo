@@ -63,7 +63,7 @@ const Game: React.FC = () => {
     <div className="game-container">
       <h1>喵星人音调大比拼 - 第{level}关</h1>
       <div className="cats-container">
-        {cats.map((cat, index) => (
+        {cats.map((_, index) => (
           <Cat
             key={index}
             onClick={() => handleCatClick(index)}

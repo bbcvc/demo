@@ -48,7 +48,7 @@ export const playMeows = async (cats: CatType[]): Promise<number> => {
 };
 
 export const playBackgroundMusic = () => {
-  const audio = new Audio("/background_music.mp3");
+  const audio = new Audio("../public/background_music.mp3");
   audio.loop = true;
   audio.volume = 0.3; // 设置音量为30%
   audio.play().catch((error) => console.error("背景音乐播放失败:", error));
